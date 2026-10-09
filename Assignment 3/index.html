@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Fixed Asset Recording Form - PT Sinar Utama</title>
+</head>
+<body>
+    <h1>Company Fixed Asset Recording Form</h1>
+    <p>Please complete all required information below to record new fixed assets into the accounting system.</p>
+
+    <form method="post" action="#" enctype="multipart/form-data">
+        <!-- Section 1: Asset Identification -->
+        <fieldset>
+            <legend>Asset Identification</legend>
+            
+            <p>
+                <label for="assetName">Asset Name:</label><br>
+                <input type="text" id="assetName" name="assetName" required placeholder="Automated Production Machine">
+            </p>
+
+            <p>
+                <label for="assetCode">Asset Code:</label><br>
+                <input type="text" id="assetCode" name="assetCode" required placeholder="ME2025001">
+            </p>
+
+            <p>
+                <label for="serialNumber">Asset Serial Number:</label><br>
+                <input type="text" id="serialNumber" name="serialNumber" placeholder="SN-987654321">
+            </p>
+
+            <p>
+                <label for="assetCategory">Asset Category:</label><br>
+                <select id="assetCategory" name="assetCategory" required>
+                    <option value="">-- Select Category --</option>
+                    <option value="Vehicle">Vehicle</option>
+                    <option value="Machinery">Machinery</option>
+                    <option value="Building">Building</option>
+                    <option value="Office Equipment">Office Equipment</option>
+                    <option value="Furniture">Furniture</option>
+                    <option value="Land">Land</option>
+                    <option value="Software">Software</option>
+                </select>
+            </p>
+        </fieldset>
+
+        <!-- Section 2: Acquisition Details -->
+        <fieldset>
+            <legend>Acquisition Details</legend>
+
+            <p>
+                <label for="acquisitionDate">Acquisition Date:</label><br>
+                <input type="date" id="acquisitionDate" name="acquisitionDate" required>
+            </p>
+
+            <p>
+                <label for="acquisitionValue">Acquisition Value / Purchase Price (IDR):</label><br>
+                <input type="number" id="acquisitionValue" name="acquisitionValue" min="0" step="1000" required placeholder="50000000">
+            </p>
+
+            <p>
+                Acquisition Method:<br>
+                <input type="radio" id="cash" name="acquisitionMethod" value="Cash Purchase" required>
+                <label for="cash">Cash Purchase</label><br>
+                <input type="radio" id="credit" name="acquisitionMethod" value="Credit Purchase">
+                <label for="credit">Credit Purchase</label><br>
+                <input type="radio" id="lease" name="acquisitionMethod" value="Finance Lease">
+                <label for="lease">Finance Lease</label><br>
+                <input type="radio" id="donation" name="acquisitionMethod" value="Donation">
+                <label for="donation">Donation</label>
+            </p>
+
+            <p>
+                <label for="vendor">Vendor / Supplier:</label><br>
+                <input type="text" id="vendor" name="vendor" required placeholder="PT Tech Machinery Indonesia">
+            </p>
+
+            <p>
+                <label for="acquisitionProof">Upload Acquisition Proof:</label><br>
+                <input type="file" id="acquisitionProof" name="acquisitionProof" accept=".pdf,.jpg,.png" required>
+                <small>(Accepted format: .pdf, .jpg, .png)</small>
+            </p>
+        </fieldset>
+
+        <!-- Section 3: Depreciation Information -->
+        <fieldset>
+            <legend>Depreciation Information</legend>
+
+            <p>
+                <label for="usefulLife">Useful Life (Years):</label><br>
+                <input type="number" id="usefulLife" name="usefulLife" min="1" max="50" required placeholder="5">
+            </p>
+
+            <p>
+                <label for="salvageValue">Salvage Value (IDR):</label><br>
+                <input type="number" id="salvageValue" name="salvageValue" min="0" step="1000" required placeholder="5000000">
+            </p>
+
+            <p>
+                <label for="depreciationMethod">Depreciation Method:</label><br>
+                <select id="depreciationMethod" name="depreciationMethod" required>
+                    <option value="">-- Select Method --</option>
+                    <option value="Straight-Line">Straight-Line Method</option>
+                    <option value="Declining Balance">Declining Balance Method</option>
+                </select>
+            </p>
+        </fieldset>
+
+        <!-- Section 4: Responsible Person & Location -->
+        <fieldset>
+            <legend>Responsible Person & Location</legend>
+
+            <p>
+                <label for="responsiblePerson">Responsible Person's Name:</label><br>
+                <input type="text" id="responsiblePerson" name="responsiblePerson" required placeholder="Budi Santoso">
+            </p>
+
+            <p>
+                <label for="userDepartment">User Department:</label><br>
+                <input type="text" id="userDepartment" name="userDepartment" required placeholder="Production / Accounting">
+            </p>
+
+            <p>
+                <label for="physicalLocation">Asset Physical Location:</label><br>
+                <input type="text" id="physicalLocation" name="physicalLocation" required placeholder="3rd Floor, Main Building">
+            </p>
+
+            <p>
+                <label for="responsibleEmail">Responsible Person's Email:</label><br>
+                <input type="email" id="responsibleEmail" name="responsibleEmail" required placeholder="budi@company.com">
+            </p>
+        </fieldset>
+
+        <!-- Submit & Reset Buttons -->
+        <p>
+            <input type="submit" value="Save Fixed Asset Data">
+            <input type="reset" value="Reset Form">
+        </p>
+    </form>
+</body>
+</html>
